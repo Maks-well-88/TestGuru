@@ -15,10 +15,16 @@ Category.destroy_all
   Category.create([{title: 'Промышленность'}, {title: 'IT-сфера'}, {title: 'Общепит'}])
 
   100.times do |i|
-    Test.create(
-      title: Faker::Lorem.sentence(word_count: 3),
-      level: rand(1..3),
-      category_id: rand(1..3))
+    test = Test.create(
+          title: Faker::Lorem.sentence(word_count: 3),
+          level: rand(1..3),
+          category_id: rand(1..3))
+
+    user = User.create(
+          name: Faker::Name.name,
+          email: Faker::Internet.email)
+
+    user.tests << test
   end
 
   100.times do |i|
@@ -34,12 +40,6 @@ Category.destroy_all
       correct: [true, false].sample,
       question_id: i += 1
       )
-  end
-
-  100.times do |i|
-    User.create(
-      name: Faker::Name.name,
-      email: Faker::Internet.email)
   end
 
 p "Создано #{User.count} пользователей."
