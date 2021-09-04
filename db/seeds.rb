@@ -26,7 +26,10 @@ Category.destroy_all
             body: Faker::Lorem.question(word_count: 4),
             test_id: test.id)
     end
-    User.create(name: Faker::Name.name, email: Faker::Internet.email).tests << test
+    User.create(name: Faker::Name.first_name,
+                surname: Faker::Name.last_name,
+                email: Faker::Internet.email,
+                password: 'qwerty12345').tests << test
   end
 
   questions.each do |question|
