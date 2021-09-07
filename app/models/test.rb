@@ -4,6 +4,9 @@ class Test < ApplicationRecord
   has_and_belongs_to_many :users
   belongs_to :creator, class_name: 'User', foreign_key: 'user_id'
 
+  validates :title, presence: true, uniqueness: {scope: :level}
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   scope :find_by_category_title, -> (category_title) {
     joins('JOIN categories ON tests.category_id = categories.id')
       .where('categories.title = ?', category_title)
