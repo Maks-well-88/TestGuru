@@ -44,6 +44,7 @@ questions.each do |question|
   2.times do
     Answer.create!(
         body: Faker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 4),
+        correct: [true, false].sample,
         question_id: question.id)
   end
 end
