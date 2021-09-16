@@ -6,7 +6,6 @@ class TestsController < ApplicationController
   end
 
   def show
-    redirect_to test_questions_path(@test)
   end
 
   def new
