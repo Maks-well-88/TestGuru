@@ -6,6 +6,8 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_current_question, on: :create
   before_update :before_update_set_next_question
 
+  PASSAGE_THRESHOLD = 85
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
@@ -17,6 +19,14 @@ class TestPassage < ApplicationRecord
 
   def count_number_of_questions
     test.questions.index(current_question).next
+  end
+
+  def test_pass_result
+    success_percentage >= PASSAGE_THRESHOLD
+  end
+
+  def success_percentage
+    (correct_questions.to_f / test.questions.count * 100).round(0)
   end
 
   private
