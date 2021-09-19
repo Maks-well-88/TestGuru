@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   end
 
   resources :tests do
-    resources :questions, shallow: true
-      resources :answers, shallow: true
+    resources :questions, shallow: true do
+      resources :answers, shallow: true, except: :index
+    end
   end
 end
