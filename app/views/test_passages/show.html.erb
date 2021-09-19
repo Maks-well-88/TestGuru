@@ -1,8 +1,9 @@
 <h1>Прохождение теста '<%= @test_passage.test.title %>'</h1>
-<p>Количество вопросов теста: <%= @test_passage.test.questions.count %> </p>
 <br />
 <span>
-  Вопрос № <%= @test_passage.count_number_of_questions %>:
+  Вопрос <%= @test_passage.count_number_of_questions %> /
+  <%= @test_passage.test.questions.count %>:
+
   <%= @test_passage.current_question.body %>
 </span>
 
