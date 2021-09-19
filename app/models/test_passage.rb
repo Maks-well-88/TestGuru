@@ -15,6 +15,10 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def count_number_of_questions
+    test.questions.index(current_question).next
+  end
+
   private
 
   def correct_answers
