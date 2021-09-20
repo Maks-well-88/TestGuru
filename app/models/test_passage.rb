@@ -21,7 +21,7 @@ class TestPassage < ApplicationRecord
     test.questions.index(current_question).next
   end
 
-  def test_pass_result
+  def success?
     success_percentage >= PASSAGE_THRESHOLD
   end
 
