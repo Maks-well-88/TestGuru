@@ -1,0 +1,16 @@
+<h1>Тест '<%= @test_passage.test.title %>' завершен!</h1>
+<hr />
+<br />
+<% if @test_passage.success? %>
+  <% tag = "correct" %>
+  <%= content_tag :h3, "Результат: тест пройден", class: tag %>
+<% else %>
+  <% tag = "not_correct" %>
+  <%= content_tag :h3, "Результат: тест не пройден", class: tag %>
+<% end %>
+
+<%= content_tag :p, "Правильных ответов: #{@test_passage.success_percentage}%", class: tag %>
+
+<br />
+<p><%= link_to 'Назад к тестам', tests_path %></p>
+<br />

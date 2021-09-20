@@ -1,9 +1,9 @@
-User.destroy_all
 Answer.delete_all
 Question.destroy_all
 Test.destroy_all
+User.destroy_all
 Category.destroy_all
-
+=begin
 categories = []
 3.times do
   categories << Category.create!(title: Faker::Lorem.sentence(word_count: 3, supplemental: true))
@@ -48,7 +48,7 @@ questions.each do |question|
         question_id: question.id)
   end
 end
-
+=end
 p "Создано пользователей: #{User.count}"
 p "Создано ответов: #{Answer.count}"
 p "Создано категории: #{Category.count}"
