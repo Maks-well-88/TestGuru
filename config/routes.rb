@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get :sign_up, to: 'users#new'
 
+  get :login, to: 'sessions#new'
+
+  resources :sessions, only: %i[create]
+
   resources :users, only: %i[new create]
 
   resources :test_passages, only: %i[show update] do

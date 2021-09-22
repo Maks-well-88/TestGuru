@@ -1,0 +1,24 @@
+<h1>Добро пожаловать!</h1>
+<br />
+<h2>Вход в аккаунт:</h2>
+
+<% if flash[:alert] %>
+  <%= content_tag :p, flash[:alert], class: 'flash alert' %>
+<% end %>
+
+<%= form_with url: sessions_path do |f| %>
+<p>
+  <%= f.label :email %>:
+  <%= f.text_field :email, placeholder: 'введите email' %>
+</p>
+<p>
+  <%= f.label :password %>:
+  <%= f.text_field :password, placeholder: 'введите пароль' %>
+</p>
+
+<p>
+  <%= f.submit 'Войти' %>
+</p>
+
+<% end %>
+<br />

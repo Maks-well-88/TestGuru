@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+	    <%= content_tag :p, "Welcome, #{current_user.name} Guru!", class: "welcome auth" %>
+    <% end %>
+
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
