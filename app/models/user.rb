@@ -1,7 +1,6 @@
 class User < ApplicationRecord
 
-  attr_reader :password
-  attr_writer :password_confirmation
+  include Auth
 
   has_many :test_passages
   has_many :tests, through: :test_passages
@@ -24,26 +23,9 @@ class User < ApplicationRecord
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
 
-  def authentificate(password_string)
-    digest(password_string) == self.password_digest ? self : false
-  end
-
-  def password=(password_string)
-    if password_string.nil?
-      self.password_digest = nil
-    else
-      @password = password_string
-      self.password_digest = digest(password_string)
-    end
-  end
-
   private
 
   def password_digest_blank?
     self.password_digest.blank?
-  end
-
-  def digest(string)
-    Digest::SHA1.hexdigest(string)
   end
 end
