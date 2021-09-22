@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root to: 'tests#index'
 
+  get :sign_up, to: 'users#new'
+
+  resources :users, only: %i[new create]
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
