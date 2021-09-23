@@ -6,7 +6,9 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test'
 
-  validates :email, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, if: :password_digest_blank?
   validates :password, confirmation: true
 
@@ -24,6 +26,10 @@ class User < ApplicationRecord
   end
 
   private
+
+  def email_format?
+    self.email.match(/VALID_EMAIL_REGEX/)
+  end
 
   def password_digest_blank?
     self.password_digest.blank?
