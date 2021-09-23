@@ -1,0 +1,9 @@
+<h1><%= link_to "TESTGURU", tests_path %></h1>
+<% if logged_in? %>
+  <%= content_tag :span, "Welcome, #{current_user.name} Guru!", class: "welcome auth" %> |
+  <%= link_to 'Выход', logout_session_path(current_user), class: "welcome auth" %>
+<% else %>
+  <%= link_to "Регистрация", sign_up_path %> |
+  <%= link_to "Аутентификация", login_path %> |
+<% end %>
+<br /><br />
