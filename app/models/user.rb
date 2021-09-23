@@ -27,10 +27,6 @@ class User < ApplicationRecord
 
   private
 
-  def email_format?
-    self.email.match(/VALID_EMAIL_REGEX/)
-  end
-
   def password_digest_blank?
     self.password_digest.blank?
   end
