@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def new
   end
@@ -13,5 +14,10 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Неверный логин или пароль!'
       render :new
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    redirect_to login_path
   end
 end

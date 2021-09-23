@@ -13,6 +13,7 @@
   <body>
     <% if logged_in? %>
 	    <%= content_tag :p, "Welcome, #{current_user.name} Guru!", class: "welcome auth" %>
+      <%= link_to 'Выход', logout_session_path(current_user), class: "welcome auth" %>
     <% end %>
 
     <%= yield %>

@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   get :login, to: 'sessions#new'
 
-  resources :sessions, only: %i[create]
+  resources :sessions, only: %i[create] do
+    member do
+      get :logout
+    end
+  end
 
   resources :users, only: %i[new create]
 
