@@ -2,6 +2,18 @@ Rails.application.routes.draw do
 
   root to: 'tests#index'
 
+  get :sign_up, to: 'users#new'
+
+  get :login, to: 'sessions#new'
+
+  resources :sessions, only: %i[create] do
+    member do
+      get :logout
+    end
+  end
+
+  resources :users, only: %i[new create]
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
