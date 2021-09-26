@@ -1,9 +1,9 @@
 <h1><%= link_to "TESTGURU", tests_path %></h1>
-<% if logged_in? %>
-  <%= content_tag :span, "Welcome, #{current_user.name} Guru!", class: "welcome auth" %> |
-  <%= link_to 'Выход', logout_session_path(current_user), class: "welcome auth" %>
+<% if user_signed_in? %>
+  <%= content_tag :span, "Welcome, #{current_user.email} Guru!", class: "welcome auth" %> |
+  <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
 <% else %>
-  <%= link_to "Регистрация", sign_up_path %> |
-  <%= link_to "Аутентификация", login_path %> |
+  <%= link_to "Регистрация", new_user_registration_path %> |
+  <%= link_to "Аутентификация", new_user_session_path %> |
 <% end %>
 <br /><br />
