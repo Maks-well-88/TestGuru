@@ -1,5 +1,5 @@
 <h1><%= test_header(@test) %></h1>
-<%= form_with model: @test do | f | %>
+<%= form_with model: [:admin, @test] do | f | %>
 
   <%= render 'shared/errors', resource: @test %>
 
