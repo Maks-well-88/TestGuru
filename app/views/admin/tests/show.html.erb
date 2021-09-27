@@ -2,8 +2,8 @@
 <hr />
 <div class='heading'>Список вопросов:</div>
 <ol>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <%= render @test.questions %>
 </ol>
 <p><%= link_to 'Назад', admin_tests_path(@test) %> |
-<%= link_to 'Создать новый вопрос', new_test_question_path(@test)  %></p>
+<%= link_to 'Создать новый вопрос', new_admin_test_question_path(@test)  %></p>
 <br />
