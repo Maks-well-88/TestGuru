@@ -1,0 +1,10 @@
+<h1><%= question_header(@question) %></h1>
+<%= form_with model: [:admin, @test, @question] do | f | %>
+  <%= render 'shared/errors', resource: @question %>
+
+  <p><%= f.label :body %></p>
+  <p><%= f.text_area :body, size: '60x10', placeholder: 'Введите вопрос' %></p>
+
+  <p><%= f.submit %></p>
+<% end %>
+<%= link_to 'Назад', admin_test_path(@question.test) %>

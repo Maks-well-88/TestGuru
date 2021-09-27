@@ -1,0 +1,16 @@
+<h1><%= test_header(@test) %></h1>
+<%= form_with model: [:admin, @test] do | f | %>
+
+  <%= render 'shared/errors', resource: @test %>
+
+  <p><%= f.label :title %></p>
+  <p><%= f.text_field :title %></p>
+
+  <p><%= f.label :level %></p>
+  <p><%= f.number_field  :level %></p>
+
+  <p><%= f.label :category_id %></p>
+  <p><%= f.collection_select :category_id, Category.order(:title), :id, :title %></p>
+
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>К вопросу: "<%= @answer.question.body %>"</h1>
+<hr />
+
+<p>Ответ: <%= @answer.body %></p>
+<p>Статус: <%= correct_answer(@answer.correct) %></p>
+
+<p>
+  <%= link_to 'Назад', admin_question_path(@answer.question) %> |
+  <%= link_to 'Редактировать', edit_admin_answer_path(@answer) %>
+</p>
+<br />

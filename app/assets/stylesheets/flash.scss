@@ -1,0 +1,14 @@
+.flash {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;}
+
+.flash.notice {
+  background-color: #11ab20;
+  color: #fff;}
+
+.flash.alert {
+  background-color: #c00;
+  color: #fff;}

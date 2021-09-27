@@ -1,0 +1,6 @@
+<div class="nav-admin">
+  <h1><%= link_to "TESTGURU", tests_path %></h1>
+    Welcome, <b><%= current_user.email %></b> Guru! | 
+    <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+</div>
+<br />

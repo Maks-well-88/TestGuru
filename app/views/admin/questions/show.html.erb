@@ -1,0 +1,11 @@
+<h1>Вопрос: "<%= @question.body %>"</h1>
+<hr />
+<div class='heading'>Варианты ответов:</div>
+<ol>
+  <%= render @question.answers %>
+</ol>
+<p>
+  <%= link_to 'Назад', admin_test_path(@question.test) %> |
+  <%= link_to 'Создать новый ответ', new_admin_question_answer_path(@question) %>
+</p>
+<br />

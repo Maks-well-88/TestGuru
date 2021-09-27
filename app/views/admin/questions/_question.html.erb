@@ -1,0 +1,6 @@
+<li>
+  <span><%= question.body %></span><br />
+  <%= link_to 'Смотреть', admin_question_path(question) %> |
+  <%= link_to 'Изменить', edit_admin_question_path(question) %> |
+  <%= link_to 'Удалить', admin_question_path(question), method: :delete, data: { confirm: 'Are you sure?' } %>
+</li>
