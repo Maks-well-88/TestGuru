@@ -12,8 +12,5 @@
   <p><%= f.label :category_id %></p>
   <p><%= f.collection_select :category_id, Category.order(:title), :id, :title %></p>
 
-  <p><%= f.label :user_id %></p>
-  <p><%= f.number_field  :user_id %></p>
-
   <p><%= f.submit %></p>
 <% end %>
