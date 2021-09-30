@@ -18,6 +18,7 @@ ru:
   new_question: "Новый вопрос к тесту: %{test}"
   edit_test: "Редактировать тест: %{title}"
   new_test: "Создать новый тест"
+  next: "Ответить"
 
   helpers:
     submit:
@@ -30,6 +31,7 @@ ru:
       answer:
         create: "Создать"
         update: "Обновить"
+
     label:
       test:
         title: "Название"
@@ -47,6 +49,20 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       all_tests: "Все тесты"
+    start:
+      good_luck: "Успешного прохождения теста!"
+
+  test_passages:
+    show:
+      header: "Прохождение теста: '%{title}'"
+      process: "Вопрос %{current} / %{all}: %{question}"
+    result:
+      completed: "Тест '%{title}' завершен!"
+      count: "Правильных ответов: %{answers}%"
+      good: "Результат: тест пройден"
+      bad: "Результат: тест не пройден"
+    update:
+      no_answer: "Вы не выбрали ни одного ответа!"
 
   admin:
     tests:
