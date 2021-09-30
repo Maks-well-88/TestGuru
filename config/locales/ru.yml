@@ -1,2 +1,9 @@
 ru:
-  
+  start: "Старт"
+
+  tests:
+    index:
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      all_tests: "Все тесты"
