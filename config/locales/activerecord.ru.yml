@@ -3,6 +3,7 @@ ru:
     models:
       test: "Тест"
       question: "Вопрос"
+      user: "Пользователь"
 
     attributes:
       test:
@@ -12,8 +13,13 @@ ru:
         body: "Вопрос"
       answer:
         body: "Ответ"
+      user:
+        password: "Пароль"
+        email: "Указанный почтовый ящик"
 
     errors:
       messages:
         blank: "не может быть пустым"
         greater_than_or_equal_to: "не может быть отрицательным"
+        too_short: "слишком короткий"
+        taken: "уже существует"

@@ -3,6 +3,7 @@ en:
     models:
       test: "Test"
       question: "Question"
+      user: "User"
 
     attributes:
       test:
@@ -12,8 +13,13 @@ en:
         body: "Question"
       answer:
         body: "Answer"
+      user:
+        password: "Password"
+        email: "Email"
 
     errors:
       messages:
         blank: "can't be blank"
         greater_than_or_equal_to: "can't be negative"
+        too_short: "is too short"
+        taken: "already exists"
