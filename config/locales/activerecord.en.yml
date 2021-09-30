@@ -9,6 +9,7 @@ en:
       test:
         title: "Title"
         level: "Level"
+        category: "Category"
       question:
         body: "Question"
       answer:
@@ -23,3 +24,4 @@ en:
         greater_than_or_equal_to: "can't be negative"
         too_short: "is too short"
         taken: "already exists"
+        required: "not selected"

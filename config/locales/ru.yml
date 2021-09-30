@@ -43,6 +43,9 @@ ru:
         body: "Ответ"
         correct: "Правильный?"
 
+    select:
+      prompt: "Пожалуйста, выберите"
+
   tests:
     index:
       title: "Название"

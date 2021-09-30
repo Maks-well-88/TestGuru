@@ -43,6 +43,9 @@ en:
         body: "Answer"
         correct: "Correct?"
 
+    select:
+      prompt: "Please, choose"
+
   tests:
     index:
       title: "Title"

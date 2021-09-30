@@ -9,6 +9,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень"
+        category: "Категория"
       question:
         body: "Вопрос"
       answer:
@@ -23,3 +24,4 @@ ru:
         greater_than_or_equal_to: "не может быть отрицательным"
         too_short: "слишком короткий"
         taken: "уже существует"
+        required: "не выбрана"
