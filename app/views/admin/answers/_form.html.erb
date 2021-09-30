@@ -3,7 +3,7 @@
   <%= render 'shared/errors', resource: @answer %>
 
   <p><%= f.label :body %></p>
-  <p><%= f.text_area :body, size: "60x5" %></p>
+  <p><%= f.text_area :body, size: "60x5", placeholder: t('answer') %></p>
 
   <p>
     <%= f.check_box :correct %>
@@ -12,4 +12,4 @@
 
   <p><%= f.submit %></p>
 <% end %>
-<p><%= link_to 'Назад', admin_question_path(@answer.question) %></p>
+<p><%= link_to t('back'), admin_question_path(@answer.question) %></p>

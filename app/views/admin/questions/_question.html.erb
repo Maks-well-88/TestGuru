@@ -1,6 +1,6 @@
 <li>
   <span><%= question.body %></span><br />
-  <%= link_to 'Смотреть', admin_question_path(question) %> |
-  <%= link_to 'Изменить', edit_admin_question_path(question) %> |
-  <%= link_to 'Удалить', admin_question_path(question), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to t('watch'), admin_question_path(question) %> |
+  <%= link_to t('edit'), edit_admin_question_path(question) %> |
+  <%= link_to t('delete'), admin_question_path(question), method: :delete, data: { confirm: t('delete_confirm') } %>
 </li>

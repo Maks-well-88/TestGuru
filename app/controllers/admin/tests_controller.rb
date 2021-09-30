@@ -15,7 +15,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     @test = current_user.created_tests.new(test_params)
     if @test.save
-      redirect_to admin_tests_path(@test)
+      redirect_to admin_tests_path(@test), notice: t('.success')
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to admin_tests_path(@test)
+      redirect_to admin_tests_path(@test), notice: t('.updated')
     else
       render :edit
     end
