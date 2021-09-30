@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      question: "Question"
+
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+      question:
+        body: "Question"
+      answer:
+        body: "Answer"
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        greater_than_or_equal_to: "can't be negative"
