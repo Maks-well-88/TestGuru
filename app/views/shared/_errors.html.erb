@@ -1,5 +1,5 @@
 <% if resource.errors.present? %>
   <% resource.errors.each do | msg | %>
-    <%= content_tag :p, msg.full_message, class: "flash alert" %>
+    <%= content_tag :div, msg.full_message, class: "alert alert-danger", role: "alert" %>
   <% end %>
 <% end %>

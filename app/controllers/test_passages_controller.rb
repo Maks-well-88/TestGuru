@@ -11,7 +11,7 @@ class TestPassagesController < ApplicationController
   def update
     options = params[:answer_ids]
     if options.nil?
-      flash.now[:alert] = t('.no_answer')
+      flash.now[:danger] = t('.no_answer')
     else
       @test_passage.accept!(params[:answer_ids])
     end

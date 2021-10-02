@@ -8,6 +8,10 @@ class Admin::BaseController < ApplicationController
   private
 
   def admin_required!
-    redirect_to root_path, alert: "Нет права доступа к запрашиваемой странице." unless current_user.admin?
+
+    unless current_user.admin?
+      flash[:danger] = "Нет права доступа к запрашиваемой странице."
+      redirect_to root_path 
+    end
   end
 end

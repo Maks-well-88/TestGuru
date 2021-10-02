@@ -1,3 +1,10 @@
+<br />
 <% flash.each do |key, msg| %>
-  <%= content_tag :p, msg, class: "flash #{key}" %>
+  <% if key == "alert" %>
+      <%= content_tag :div, msg, class: "alert alert-danger", role: "alert" %>
+  <% elsif key == "notice" %>
+    <%= content_tag :div, msg, class: "alert alert-success", role: "alert" %>
+  <% else %>
+    <%= content_tag :div, msg, class: "alert alert-#{key}", role: "alert" %>
+  <% end %>
 <% end %>
