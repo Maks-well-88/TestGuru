@@ -3,8 +3,9 @@
   <%= render 'shared/errors', resource: @question %>
 
   <p><%= f.label :body %></p>
-  <p><%= f.text_area :body, size: '60x10', placeholder: 'Введите вопрос' %></p>
+  <p><%= f.text_area :body, size: '60x10', placeholder: t('question') %></p>
 
   <p><%= f.submit %></p>
 <% end %>
-<%= link_to 'Назад', admin_test_path(@question.test) %>
+<%= link_to t('back'), admin_test_path(@question.test) %>
+<br />

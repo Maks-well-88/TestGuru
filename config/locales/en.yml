@@ -1,33 +1,103 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  back: "Back"
+  start: "Start"
+  watch: "Show"
+  edit: "Edit"
+  delete: "Delete"
+  delete_confirm: "Are you sure?"
+  create_question: "Create a new question"
+  create_answer: "Create a new answer"
+  create_test: "-> Create test"
+  question: "Enter your question"
+  answer: "Enter your answer"
+  edit_answer: "Edit the answer to the question: %{question}"
+  new_answer: "New answer to the question: %{question}"
+  correct: "correct"
+  not_correct: "not correct"
+  edit_question: "Edit test '%{test}' question"
+  new_question: "New test '%{test}' question"
+  edit_test: "Edit test: %{title}"
+  new_test: "Create a new test"
+  next: "To answer"
+
+  helpers:
+    submit:
+      test:
+        create: "Create"
+        update: "Update"
+      question:
+        create: "Create"
+        update: "Update"
+      answer:
+        create: "Create"
+        update: "Update"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Question"
+      answer:
+        body: "Answer"
+        correct: "Correct?"
+
+    select:
+      prompt: "Please, choose"
+
+  tests:
+    index:
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      all_tests: "All tests"
+    start:
+      good_luck: "Successful passing of the test!"
+
+  test_passages:
+    show:
+      header: "Passing the test: '%{title}'"
+      process: "Question %{current} / %{all}: %{question}"
+    result:
+      completed: "Test '%{title}' completed!"
+      count: "Correct answers: %{answers}%"
+      good: "Result: test passed"
+      bad: "Result: test failed"
+    update:
+      no_answer: "You haven't selected any answers!"
+
+  admin:
+    tests:
+      show:
+        test: "Test"
+        question_list: "The list of questions"
+      index:
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        all_tests: "All tests"
+        action: "Action"
+      create:
+        success: "The test has been successfully created!"
+      update:
+        updated: "The test has been successfully updated!"
+
+    questions:
+      show:
+        question: "Question"
+        answers: "Answer options"
+      create:
+        success: "The question has been successfully created!"
+      update:
+        updated: "The question has been successfully updated!"
+
+    answers:
+      show:
+        for_question: "For the question: %{body}"
+        answer: "Answer: %{body}"
+        status: "Status: %{correct}"
+      create:
+        success: "Answer successfully created!"
+      update:
+        updated: "Answer updated successfully!"

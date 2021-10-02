@@ -1,2 +1,103 @@
 ru:
-  
+  back: "Назад"
+  start: "Старт"
+  watch: "Смотреть"
+  edit: "Изменить"
+  delete: "Удалить"
+  delete_confirm: "Вы уверены?"
+  create_question: "Создать новый вопрос"
+  create_answer: "Создать новый ответ"
+  create_test: "-> Создать тест"
+  question: "Введите вопрос"
+  answer: "Введите ответ"
+  edit_answer: "Редактировать ответ к вопросу: %{question}"
+  new_answer: "Новый ответ к вопросу: %{question}"
+  correct: "правильный"
+  not_correct: "не правильный"
+  edit_question: "Редактировать вопрос к тесту: %{test}"
+  new_question: "Новый вопрос к тесту: %{test}"
+  edit_test: "Редактировать тест: %{title}"
+  new_test: "Создать новый тест"
+  next: "Ответить"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать"
+        update: "Обновить"
+      question:
+        create: "Создать"
+        update: "Обновить"
+      answer:
+        create: "Создать"
+        update: "Обновить"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Вопрос"
+      answer:
+        body: "Ответ"
+        correct: "Правильный?"
+
+    select:
+      prompt: "Пожалуйста, выберите"
+
+  tests:
+    index:
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      all_tests: "Все тесты"
+    start:
+      good_luck: "Успешного прохождения теста!"
+
+  test_passages:
+    show:
+      header: "Прохождение теста: '%{title}'"
+      process: "Вопрос %{current} / %{all}: %{question}"
+    result:
+      completed: "Тест '%{title}' завершен!"
+      count: "Правильных ответов: %{answers}%"
+      good: "Результат: тест пройден"
+      bad: "Результат: тест не пройден"
+    update:
+      no_answer: "Вы не выбрали ни одного ответа!"
+
+  admin:
+    tests:
+      show:
+        test: "Тест"
+        question_list: "Список вопросов"
+      index:
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        all_tests: "Все тесты"
+        action: "Действие"
+      create:
+        success: "Тест успешно создан!"
+      update:
+        updated: "Тест успешно обновлен!"
+
+    questions:
+      show:
+        question: "Вопрос"
+        answers: "Варианты ответов"
+      create:
+        success: "Вопрос успешно создан!"
+      update:
+        updated: "Вопрос успешно обновлен!"
+
+    answers:
+      show:
+        for_question: "К вопросу: %{body}"
+        answer: "Ответ: %{body}"
+        status: "Статус: %{correct}"
+      create:
+        success: "Ответ успешно создан!"
+      update:
+        updated: "Ответ успешно обновлен!"

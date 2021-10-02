@@ -9,7 +9,12 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    options = params[:answer_ids]
+    if options.nil?
+      flash.now[:alert] = t('.no_answer')
+    else
+      @test_passage.accept!(params[:answer_ids])
+    end
 
     if @test_passage.completed?
       redirect_to result_test_passage_path(@test_passage)

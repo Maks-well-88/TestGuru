@@ -1,12 +1,12 @@
 module AnswersHelper
   def answer_header(answer)
-    answer.persisted? ? "Редактировать ответ к вопросу: #{@answer.question.body}" : "Новый ответ к вопросу: #{@answer.question.body}"
+    answer.persisted? ? t('edit_answer', question: @answer.question.body) : t('new_answer', question: @answer.question.body)
   end
 
   def correct_answer(type_of_answer)
     case type_of_answer
-    when false then 'не правильный'
-    when true then 'правильный'
+    when false then t('not_correct')
+    when true then t('correct')
     end
   end
 end
