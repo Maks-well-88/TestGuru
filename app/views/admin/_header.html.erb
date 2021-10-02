@@ -2,7 +2,6 @@
   <div class="container-fluid">
     <b><%= link_to "TESTGURU", tests_path, class: "navbar-brand" %></b>
 
-
       <span class="navbar-text">
         <%= content_tag :span, "Welcome, #{current_user.email} Guru!" %> |
         <%= link_to 'Выход', destroy_user_session_path, method: :delete %>

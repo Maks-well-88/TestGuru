@@ -16,7 +16,7 @@ ru:
         body: "Ответ"
       user:
         password: "Пароль"
-        email: "Указанный почтовый ящик"
+        email: "Почтовый ящик"
 
     errors:
       messages:
