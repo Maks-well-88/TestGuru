@@ -1,6 +1,11 @@
-<div class="nav-admin">
-  <h1><%= link_to "TESTGURU", tests_path %></h1>
-    Welcome, <b><%= current_user.email %></b> Guru! | 
-    <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
-</div>
-<br />
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9aededd0;">
+  <div class="container-fluid">
+    <b><%= link_to "TESTGURU", tests_path, class: "navbar-brand" %></b>
+
+
+      <span class="navbar-text">
+        <%= content_tag :span, "Welcome, #{current_user.email} Guru!" %> |
+        <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+      </span>
+    </div>
+</nav>

@@ -1,9 +1,24 @@
-<h1><%= link_to "TESTGURU", tests_path %></h1>
-<% if user_signed_in? %>
-  <%= content_tag :span, "Welcome, #{current_user.email} Guru!", class: "welcome auth" %> |
-  <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Регистрация", new_user_registration_path %> |
-  <%= link_to "Аутентификация", new_user_session_path %> |
-<% end %>
-<br /><br />
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9aededd0;">
+  <div class="container-fluid">
+    <b><%= link_to "TESTGURU", tests_path, class: "navbar-brand" %></b>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to 'Управление тестами', admin_tests_path, class: "nav-link" %>
+          <% end %>
+        </li>
+      </ul>
+
+      <span class="navbar-text">
+        <% if user_signed_in? %>
+          <%= content_tag :span, "Welcome, #{current_user.email} Guru!" %> |
+          <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Регистрация", new_user_registration_path %> |
+          <%= link_to "Аутентификация", new_user_session_path %>
+        <% end %>
+      </span>
+    </div>
+</nav>
