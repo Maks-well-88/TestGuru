@@ -19,6 +19,8 @@ ru:
   edit_test: "Редактировать тест: %{title}"
   new_test: "Создать новый тест"
   next: "Ответить"
+  description: "Вопрос к тесту '%{title}' приложения 'TestGuru'"
+  content: "Вопрос: %{body}"
 
   helpers:
     submit:
@@ -66,6 +68,9 @@ ru:
       bad: "Результат: тест не пройден"
     update:
       no_answer: "Вы не выбрали ни одного ответа!"
+    gist:
+      success: "Вопрос успешно сохранен по ссылке: %{url}"
+      failure: "Что-то пошло не так..."
 
   admin:
     tests:
