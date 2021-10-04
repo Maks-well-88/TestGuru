@@ -22,6 +22,8 @@ gem 'devise', '~> 4.0'
 #Use for UI
 gem 'bootstrap', '~> 5.1'
 gem 'jquery-rails'
+# Toolkit for the GitHub API
+gem "octokit", "~> 4.0"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
