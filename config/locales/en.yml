@@ -106,3 +106,10 @@ en:
         success: "Answer successfully created!"
       update:
         updated: "Answer updated successfully!"
+
+    gists:
+      index:
+        header: "All gists"
+        question: "Question"
+        url: "GitHub Gists"
+        user: "User"

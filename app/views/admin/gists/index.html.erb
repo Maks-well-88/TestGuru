@@ -1,0 +1,21 @@
+<h2><%= t('.header') %>:</h2>
+<br />
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr class="table-info">
+          <th scope="col"><%= t('.question') %></th>
+          <th scope="col"><%= t('.url') %></th>
+          <th scope="col"><%= t('.user') %></th>
+        </tr>
+      </thead>
+
+      <%= render @gists %>
+
+    </table>
+  </div>
+</div>
+
+<%= link_to t('back'), tests_path %>
+<br />

@@ -106,3 +106,10 @@ ru:
         success: "Ответ успешно создан!"
       update:
         updated: "Ответ успешно обновлен!"
+
+    gists:
+      index:
+        header: "Все заметки"
+        question: "Вопрос"
+        url: "GitHub Gists"
+        user: "Пользователь"
