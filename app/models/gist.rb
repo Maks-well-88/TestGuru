@@ -8,4 +8,7 @@ class Gist < ApplicationRecord
     question.body.truncate(LENGTH_LIMITATION)
   end
 
+  def hash_url
+    url[/gist.github.com\/(\w+)/, 1]
+  end
 end
