@@ -1,8 +1,6 @@
-<tbody>
   <tr>
-    <td><%= button_to t('start'), start_test_path(test)%></th>
-    <td><%= test.title %></td>
+    <td><%= button_to t('start'), start_test_path(test)%></td>
+    <td class="sortingTitle"><%= test.title %></td>
     <td><%= test.level %></td>
     <td><%= test.questions.count %></td>
   </tr>
-</tbody>
