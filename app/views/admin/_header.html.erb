@@ -2,6 +2,15 @@
   <div class="container-fluid">
     <b><%= link_to "TESTGURU", tests_path, class: "navbar-brand" %></b>
 
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if user_signed_in?%>
+          <li class="nav-item">
+              <%= link_to 'GitHub Gists', admin_gists_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+
       <span class="navbar-text">
         <%= content_tag :span, "Welcome, #{current_user.email} Guru!" %> |
         <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
