@@ -22,6 +22,7 @@ gem 'devise', '~> 4.0'
 #Use for UI
 gem 'bootstrap', '~> 5.1'
 gem 'jquery-rails'
+gem 'octicons_helper'
 # Toolkit for the GitHub API
 gem "octokit", "~> 4.0"
 
