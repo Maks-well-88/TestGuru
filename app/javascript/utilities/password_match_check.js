@@ -6,20 +6,25 @@ document.addEventListener('turbolinks:load', function() {
 
   if (passwordField && confirmationField) {
     confirmationField.addEventListener('input', checkField)
+    passwordField.addEventListener('input', checkField)
   }
 
   function checkField () {
     var password = passwordField.value
     var confirmation = confirmationField.value
 
-    if (confirmation != password) {
+    if (confirmation == password && password != '') {
+      keyWarning.classList.add('valid-password')
+      keyWarning.classList.remove('invalid-password')
+      keyWarning.classList.remove('hide')
+    } else if (confirmation != password && confirmation != '') {
       keyWarning.classList.add('invalid-password')
       keyWarning.classList.remove('valid-password')
       keyWarning.classList.remove('hide')
     } else {
-      keyWarning.classList.add('valid-password')
+      keyWarning.classList.remove('valid-password')
       keyWarning.classList.remove('invalid-password')
-      keyWarning.classList.remove('hide')
+      keyWarning.classList.add('hide')
     }
   }
 })
