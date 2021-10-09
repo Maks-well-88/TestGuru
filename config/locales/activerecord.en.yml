@@ -17,6 +17,10 @@ en:
       user:
         password: "Password"
         email: "Email"
+        remember_me: "Remember me"
+        name: "Name"
+        surname: "Surname"
+        password_confirmation: "Password confirmation"
 
     errors:
       messages:

@@ -19,8 +19,8 @@
           <%= content_tag :span, "Welcome, #{current_user.email} Guru!" %> |
           <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to "Регистрация", new_user_registration_path %> |
-          <%= link_to "Аутентификация", new_user_session_path %>
+          <%= link_to "Регистрация", new_user_registration_path, class: "text-decoration-none" %> |
+          <%= link_to "Аутентификация", new_user_session_path, class: "text-decoration-none" %>
         <% end %>
       </span>
     </div>
