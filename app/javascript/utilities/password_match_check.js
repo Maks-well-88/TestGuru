@@ -17,7 +17,10 @@ document.addEventListener('turbolinks:load', function() {
       keyWarning.classList.add('valid-password')
       keyWarning.classList.remove('invalid-password')
       keyWarning.classList.remove('hide')
-    } else if (confirmation != password && confirmation != '') {
+      return
+    }
+
+    if (confirmation != password && confirmation != '') {
       keyWarning.classList.add('invalid-password')
       keyWarning.classList.remove('valid-password')
       keyWarning.classList.remove('hide')
