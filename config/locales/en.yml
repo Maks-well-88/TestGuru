@@ -21,6 +21,16 @@ en:
   next: "To answer"
   description: "Question to test '%{title}' of 'TestGuru' application"
   content: "Question: %{body}"
+  entrance: "Sign in!"
+  btn_entrance: "Entrance"
+  register: "Register now!"
+  btn_register: "Create an account"
+  enter_email: "Enter Email"
+  enter_pass: "Enter password"
+  enter_name: "Enter name"
+  enter_surname: "Enter surname"
+  confirm_pass: "Repeat password"
+  characters_minimum: "characters minimum"
 
   helpers:
     submit:

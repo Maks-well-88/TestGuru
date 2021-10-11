@@ -21,6 +21,16 @@ ru:
   next: "Ответить"
   description: "Вопрос к тесту '%{title}' приложения 'TestGuru'"
   content: "Вопрос: %{body}"
+  entrance: "Войдите!"
+  btn_entrance: "Вход"
+  register: "Зарегистрируйтесь!"
+  btn_register: "Создать аккаунт"
+  enter_email: "Введите Email"
+  enter_pass: "Введите пароль"
+  enter_name: "Введите имя"
+  enter_surname: "Введите фамилию"
+  confirm_pass: "Повторите пароль"
+  characters_minimum: "символов минимум"
 
   helpers:
     submit:

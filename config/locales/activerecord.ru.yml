@@ -17,6 +17,10 @@ ru:
       user:
         password: "Пароль"
         email: "Почтовый ящик"
+        remember_me: "Запоминить меня"
+        name: "Имя"
+        surname: "Фамилия"
+        password_confirmation: "Подтверждение пароля"
 
     errors:
       messages:
