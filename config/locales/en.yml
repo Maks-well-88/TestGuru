@@ -97,6 +97,8 @@ en:
         success: "The test has been successfully created!"
       update:
         updated: "The test has been successfully updated!"
+      update_inline:
+        updated: "The test has been successfully updated!"
 
     questions:
       show:

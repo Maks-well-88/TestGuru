@@ -97,6 +97,8 @@ ru:
         success: "Тест успешно создан!"
       update:
         updated: "Тест успешно обновлен!"
+      update_inline:
+        updated: "Тест успешно обновлен!"
 
     questions:
       show:
