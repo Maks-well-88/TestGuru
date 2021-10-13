@@ -9,6 +9,7 @@ document.addEventListener('turbolinks:load', function() {
     passwordField.addEventListener('input', checkField)
   }
 
+
   function checkField () {
     var password = passwordField.value
     var confirmation = confirmationField.value

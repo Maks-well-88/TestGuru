@@ -1,5 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <br />
+
+<%= content_tag :div, "#{@test_passage.count_persentage} %",
+                     data: { percentage: @test_passage.count_persentage },
+                     class: "myBar mb-3" %>
+
 <span>
   <%= t('.process', current: @test_passage.count_number_of_questions,
                      all: @test_passage.test.questions.count,

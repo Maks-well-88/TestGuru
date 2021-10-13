@@ -18,7 +18,11 @@ class TestPassage < ApplicationRecord
   end
 
   def count_number_of_questions
-    test.questions.index(current_question).next
+    if test.questions.index(current_question).nil?
+      test.questions.count + 1
+    else
+      test.questions.index(current_question).next
+    end
   end
 
   def success?
@@ -27,6 +31,10 @@ class TestPassage < ApplicationRecord
 
   def success_percentage
     (correct_questions.to_f / test.questions.count * 100).round(0)
+  end
+
+  def count_persentage
+    ((count_number_of_questions - 1) / test.questions.count.to_f * 100).round(0)
   end
 
   private
