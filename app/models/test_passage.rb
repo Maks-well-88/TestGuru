@@ -18,7 +18,7 @@ class TestPassage < ApplicationRecord
   end
 
   def count_number_of_questions
-    if test.questions.index(current_question).nil?
+    if completed?
       test.questions.count + 1
     else
       test.questions.index(current_question).next
