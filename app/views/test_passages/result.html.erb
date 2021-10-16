@@ -1,6 +1,10 @@
 <h1><%= t('.completed', title: @test_passage.test.title) %></h1>
-<hr />
 <br />
+
+<%= content_tag :div, "#{@test_passage.count_persentage} %",
+                     data: { percentage: @test_passage.count_persentage },
+                     class: "myBar mb-3" %>
+
 <% if @test_passage.success? %>
   <% tag = "correct" %>
   <%= content_tag :h3, t('.good'), class: tag %>
