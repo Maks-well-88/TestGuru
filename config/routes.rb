@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sing_in: :login, sing_out: :logout }
 
+  resources :feedbacks, only: %i[new create]
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
