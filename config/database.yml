@@ -24,7 +24,3 @@ test:
 production:
   <<: *default
   database: test_guru_production
-  user_name: ENV['DB_USERNAME']
-  password: ENV['DB_PASSWORD']
-  host: ec2-44-198-151-32.compute-1.amazonaws.com
-  port: 5432
