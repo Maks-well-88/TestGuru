@@ -64,6 +64,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'https://maks-test-guru.herokuapp.com', protocol: 'https' }
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
@@ -72,7 +73,7 @@ Rails.application.configure do
   	port: 587,
   	user_name: ENV['SMTP_USERNAME'],
   	password: ENV['SMTP_PASSWORD'],
-  	authentication: 'plain',
+  	authentication: :plain,
   	enable_starttls_auto: true }
 
   # Ignore bad email addresses and do not raise email delivery errors.
