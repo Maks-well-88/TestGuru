@@ -1,10 +1,19 @@
-<%= form_for :feedback, url: feedbacks_path, method: :post do | f | %>
-
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
-
-  <p><%= f.label :body %></p>
-  <p><%= f.text_area :body, size: "60x5" %></p>
-
-  <p><%= f.submit class: "btn btn-primary" %></p>
-<% end %>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <%= form_for :feedback, url: feedbacks_path, method: :post do | f | %>
+          <div class="mb-3">
+            <%= f.label :title, class: "form-label" %>
+            <%= f.text_field :title, class: "form-control", id: "exampleFormControlInput1"  %>
+          </div>
+          <div class="mb-3">
+            <%= f.label :body, class: "form-label" %>
+            <%= f.text_area :body, class: "form-control", id: "exampleFormControlTextarea1", size: "60x5" %>
+          </div>
+          <p><%= f.submit class: "btn btn-primary" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
