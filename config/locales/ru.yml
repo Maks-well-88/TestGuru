@@ -54,6 +54,9 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильный?"
+      feedback:
+        title: "Тема"
+        body: "Текст сообщения"
 
     select:
       prompt: "Пожалуйста, выберите"
@@ -81,6 +84,15 @@ ru:
     gist:
       success: "Вопрос успешно сохранен по ссылке: %{url}"
       failure: "Что-то пошло не так..."
+
+  feedbacks:
+    new:
+      header: "Форма обратной связи"
+    form:
+      send: "Отправить"
+    create:
+      success: "Ваше письмо успешно отправлено!"
+      error: "Что-то пошло не так, сообщение не отправлено!"
 
   admin:
     tests:

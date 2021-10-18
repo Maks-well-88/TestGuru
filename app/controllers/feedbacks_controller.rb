@@ -8,9 +8,9 @@ class FeedbacksController < ApplicationController
       @feedback[:user] = current_user.email
 
       FeedbackMailer.feedback(@feedback).deliver_now
-      redirect_to root_path, notice: "Сообщение успешно отправлено!"
+      redirect_to root_path, notice: t('.success')
     else
-      render new_feedback_path, alert: "Упс, что-то пошло не так..."
+      render new_feedback_path, alert: t('.error')
     end
   end
 
