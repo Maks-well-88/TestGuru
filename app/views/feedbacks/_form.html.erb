@@ -1,0 +1,10 @@
+<%= form_for :feedback, url: feedbacks_path, method: :post do | f | %>
+
+  <p><%= f.label :title %></p>
+  <p><%= f.text_field :title %></p>
+
+  <p><%= f.label :body %></p>
+  <p><%= f.text_area :body, size: "60x5" %></p>
+
+  <p><%= f.submit class: "btn btn-primary" %></p>
+<% end %>
