@@ -69,6 +69,7 @@ ru:
       all_tests: "Все тесты"
     start:
       good_luck: "Успешного прохождения теста!"
+      impossible: "Упс!.. Невозможно пройти тест без вопросов!"
 
   test_passages:
     show:

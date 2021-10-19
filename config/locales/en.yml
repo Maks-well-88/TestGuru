@@ -69,6 +69,7 @@ en:
       all_tests: "All tests"
     start:
       good_luck: "Successful passing of the test!"
+      impossible: "Oops!.. It's impossible to pass the test without questions!"
 
   test_passages:
     show:
