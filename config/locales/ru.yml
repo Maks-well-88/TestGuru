@@ -54,6 +54,9 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильный?"
+      feedback:
+        title: "Тема"
+        body: "Текст сообщения"
 
     select:
       prompt: "Пожалуйста, выберите"
@@ -66,6 +69,7 @@ ru:
       all_tests: "Все тесты"
     start:
       good_luck: "Успешного прохождения теста!"
+      impossible: "Упс!.. Невозможно пройти тест без вопросов!"
 
   test_passages:
     show:
@@ -81,6 +85,15 @@ ru:
     gist:
       success: "Вопрос успешно сохранен по ссылке: %{url}"
       failure: "Что-то пошло не так..."
+
+  feedbacks:
+    new:
+      header: "Форма обратной связи"
+    form:
+      send: "Отправить"
+    create:
+      success: "Ваше письмо успешно отправлено!"
+      error: "Что-то пошло не так, сообщение не отправлено!"
 
   admin:
     tests:

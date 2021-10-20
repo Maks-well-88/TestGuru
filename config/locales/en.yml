@@ -54,6 +54,9 @@ en:
       answer:
         body: "Answer"
         correct: "Correct?"
+      feedback:
+        title: "Theme"
+        body: "Message text"
 
     select:
       prompt: "Please, choose"
@@ -66,6 +69,7 @@ en:
       all_tests: "All tests"
     start:
       good_luck: "Successful passing of the test!"
+      impossible: "Oops!.. It's impossible to pass the test without questions!"
 
   test_passages:
     show:
@@ -81,6 +85,15 @@ en:
     gist:
       success: "The question was successfully saved at the link: %{url}"
       failure: "Something went wrong..."
+
+  feedbacks:
+    new:
+      header: "Feedback form"
+    form:
+      send: "Send"
+    create:
+      success: "Your letter has been successfully sent!"
+      error: "Something went wrong, the message was not sent!"
 
   admin:
     tests:

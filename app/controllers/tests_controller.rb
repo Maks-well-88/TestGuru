@@ -7,9 +7,13 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests.push(@test)
-    flash[:warning] = t('.good_luck')
-    redirect_to current_user.test_passage(@test)
+    if @test.questions.any?
+      current_user.tests.push(@test)
+      flash[:warning] = t('.good_luck')
+      redirect_to current_user.test_passage(@test)
+    else
+      redirect_to root_path, alert: t('.impossible')
+    end
   end
 
   private
