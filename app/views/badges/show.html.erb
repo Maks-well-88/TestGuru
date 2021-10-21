@@ -1,0 +1,19 @@
+<h1 class="mt-3"><%= @badge.title %></h1>
+<hr />
+<%= link_to "К тестам", tests_path, class: "btn btn-outline-info btn-sm" %>
+<%= link_to "К наградам", badges_path, class: "btn btn-outline-info btn-sm" %>
+
+<% if current_user.admin? %>
+<%= link_to "Редактировать", edit_admin_badge_path(@badge), class: "btn btn-warning btn-sm" %>
+<%= link_to "Удалить", admin_badge_path(@badge),
+    class: "btn btn-danger btn-sm",
+    method: :delete,
+    data: { confirm: "Вы уверены?"} %>
+<% end %>
+
+<div class="row mt-4">
+  <div class="col-6">
+    <p><%= image_tag("#{@badge.img_name}", size: "230") %></p>
+    <p><%= @badge.description %></p>
+  </div>
+</div>
