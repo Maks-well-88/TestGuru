@@ -10,11 +10,11 @@
   <p><%= f.select :img_name, @images %></p>
 
   <p><%= f.label :rule %></p>
-  <p><%= f.text_field :rule %></p>
+  <p><%= f.select :rule, @rules %></p>
 
   <p><%= f.label :description %></p>
   <p><%= f.text_area :description, size: "50x5" %></p>
 
   <%= f.submit class: "btn btn-primary" %>
-  <%= link_to "Назад", admin_badges_path, class: "btn btn-primary" %>
+  <%= link_to "Назад", badges_path, class: "btn btn-primary" %>
 <% end %>

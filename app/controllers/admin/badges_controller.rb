@@ -1,6 +1,7 @@
 class Admin::BadgesController < Admin::BaseController
-  before_action :set_images, only: %i[new edit]
+  before_action :set_images, only: %i[new edit update create]
   before_action :set_badge, only: %i[edit update destroy]
+  before_action :set_rule, only: %i[new edit update create]
 
   def new
     @badge = Badge.new
@@ -32,6 +33,10 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   private
+
+  def set_rule
+    @rules = Badge::RULES
+  end
 
   def set_badge
     @badge = Badge.find(params[:id])

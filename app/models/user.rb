@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test'
   has_many :gists
+  has_and_belongs_to_many :badges
 
   scope :find_test_by_level, -> (level) {
     joins('JOIN tests ON tests.user_id = users.id')
