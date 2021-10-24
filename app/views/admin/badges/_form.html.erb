@@ -1,4 +1,4 @@
-<h1>Форма для награды</h1>
+<h1><%= badge_header(@badge) %></h1>
 <hr />
 <%= form_with model: [:admin, @badge] do |f| %>
   <%= render 'shared/errors', resource: @badge %>
@@ -16,5 +16,5 @@
   <p><%= f.text_area :description, size: "50x5" %></p>
 
   <%= f.submit class: "btn btn-primary" %>
-  <%= link_to "Назад", badges_path, class: "btn btn-primary" %>
+  <%= link_to t('back'), badges_path, class: "btn btn-primary" %>
 <% end %>

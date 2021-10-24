@@ -23,7 +23,7 @@ class BadgeService
   end
 
   def checking_new_badges
-    information = "Поздравляем c достижением! Проверьте награды!"
+    information = I18n.t('information')
     @user_badges_after_passing = @current_user.badges.count
     information if @user_badges != @user_badges_after_passing
   end

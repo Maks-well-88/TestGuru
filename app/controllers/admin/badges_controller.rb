@@ -10,7 +10,7 @@ class Admin::BadgesController < Admin::BaseController
   def create
     @badge = Badge.new(badge_params)
     if @badge.save
-      flash[:success] = "Награда успешно создана"
+      flash[:success] = t('.success')
       redirect_to badges_path
     else
       render :new
@@ -21,7 +21,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def update
     if @badge.update(badge_params)
-      redirect_to badges_path, notice: "Награда успешно обновлена!"
+      redirect_to badges_path, notice: t('.updated')
     else
       render :edit
     end
@@ -29,7 +29,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def destroy
     @badge.destroy
-    redirect_to badges_path, notice: "Награда успешно удалена!"
+    redirect_to badges_path, notice: t('.deleted')
   end
 
   private

@@ -1,4 +1,7 @@
 en:
+  to_tests: "Go to tests"
+  create_badge: "Create a badge"
+  to_badges: "Go to badges"
   back: "Back"
   start: "Start"
   watch: "Show"
@@ -18,6 +21,8 @@ en:
   new_question: "New test '%{test}' question"
   edit_test: "Edit test: %{title}"
   new_test: "Create a new test"
+  edit_badge: "Edit badge: %{title}"
+  new_badge: "Create a new badge"
   next: "To answer"
   description: "Question to test '%{title}' of 'TestGuru' application"
   content: "Question: %{body}"
@@ -31,6 +36,7 @@ en:
   enter_surname: "Enter surname"
   confirm_pass: "Repeat password"
   characters_minimum: "characters minimum"
+  information: "Congratulations on your achievement! Check out the badges!"
 
   helpers:
     submit:
@@ -41,6 +47,9 @@ en:
         create: "Create"
         update: "Update"
       answer:
+        create: "Create"
+        update: "Update"
+      badge:
         create: "Create"
         update: "Update"
 
@@ -95,6 +104,12 @@ en:
       success: "Your letter has been successfully sent!"
       error: "Something went wrong, the message was not sent!"
 
+  badges:
+    index:
+      main_header: "All badges"
+      user_header: "My badges"
+      no_badges: "You don't have any badges yet."
+
   admin:
     tests:
       show:
@@ -138,3 +153,11 @@ en:
         question: "Question"
         url: "GitHub Gists"
         user: "User"
+
+    badges:
+      create:
+        success: "The badge has been successfully created!"
+      update:
+        updated: "Badge has been successfully updated!"
+      destroy:
+        deleted: "Badge successfully removed!"
