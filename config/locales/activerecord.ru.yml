@@ -4,6 +4,7 @@ ru:
       test: "Тест"
       question: "Вопрос"
       user: "Пользователь"
+      badge: "Бейдж"
 
     attributes:
       test:
@@ -21,6 +22,12 @@ ru:
         name: "Имя"
         surname: "Фамилия"
         password_confirmation: "Подтверждение пароля"
+      badge:
+        title: "Название бейджа"
+        img_name: "Название изображения"
+        rule: "Правило"
+        rule_value: "Значение правила"
+        description: "Описание правила"
 
     errors:
       messages:

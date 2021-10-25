@@ -17,6 +17,8 @@ class TestPassagesController < ApplicationController
     end
 
     if @test_passage.completed?
+      message = BadgeService.new(@test_passage).call
+      flash[:success] = message if message != nil
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
@@ -29,7 +31,7 @@ class TestPassagesController < ApplicationController
 
     if new_gist.success?
       flash_options = { notice: t('.success', url: result.html_url) }
-      
+
       current_user.gists.create(question: @test_passage.current_question, url: result.html_url )
     else
       flash_options = { alert: t('.failure') }

@@ -5,6 +5,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: :create
   before_update :before_update_set_next_question
+  before_update :before_update_set_success
 
   PASSAGE_THRESHOLD = 85
 
@@ -53,5 +54,9 @@ class TestPassage < ApplicationRecord
 
   def before_validation_set_current_question
     self.current_question = test.questions.first
+  end
+
+  def before_update_set_success
+    self.success = true if self.success?
   end
 end

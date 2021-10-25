@@ -4,6 +4,7 @@ en:
       test: "Test"
       question: "Question"
       user: "User"
+      badge: "Badge"
 
     attributes:
       test:
@@ -21,6 +22,12 @@ en:
         name: "Name"
         surname: "Surname"
         password_confirmation: "Password confirmation"
+      badge:
+        title: "Badge name"
+        img_name: "Image title"
+        rule: "The rule"
+        rule_value: "Rule value"
+        description: "Description of the rule"
 
     errors:
       messages:
