@@ -26,6 +26,7 @@ en:
         title: "Badge name"
         img_name: "Image title"
         rule: "The rule"
+        rule_value: "Rule value"
         description: "Description of the rule"
 
     errors:

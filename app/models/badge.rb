@@ -5,6 +5,6 @@ class Badge < ApplicationRecord
   validates :title, presence: true,
                     uniqueness: true
 
-  RULES = %i[first_pass level_1 category_backend]
+  RULES = %i[first level category]
 
 end

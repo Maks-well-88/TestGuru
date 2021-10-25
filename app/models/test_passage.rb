@@ -57,6 +57,6 @@ class TestPassage < ApplicationRecord
   end
 
   def before_update_set_success
-    self.success? ? self.success = true : self.success = false
+    self.success = true if self.success?
   end
 end

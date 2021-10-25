@@ -10,7 +10,7 @@ class BadgeService
   def call
     @user_badges = @current_user.badges.count
     @badges.each do |badge|
-      if send("#{set_rule(badge)}_rule_observed?", badge)
+      if send("#{badge.rule}_rule_observed?", badge)
         @current_user.badges.push(badge)
       end
     end
@@ -19,9 +19,6 @@ class BadgeService
 
   private
 
-  def checking_first_rule_badges(badge)
-  end
-
   def checking_new_badges
     information = I18n.t('information')
     @user_badges_after_passing = @current_user.badges.count
@@ -29,14 +26,14 @@ class BadgeService
   end
 
   def level_rule_observed?(badge)
-    success_tests_by_level = passed_success.find_by_level(set_value(badge)).uniq.count
-    all_tests_by_level = Test.find_by_level(set_value(badge)).count
+    success_tests_by_level = passed_success.find_by_level(badge.rule_value).uniq.count
+    all_tests_by_level = Test.find_by_level(badge.rule_value).count
     success_tests_by_level == all_tests_by_level && !@current_user.badges.include?(badge)
   end
 
   def category_rule_observed?(badge)
-    success_tests_by_category = passed_success.tests_by_category(set_value(badge)).uniq.count
-    all_tests_by_category = Test.tests_by_category(set_value(badge)).count
+    success_tests_by_category = passed_success.tests_by_category(badge.rule_value).uniq.count
+    all_tests_by_category = Test.tests_by_category(badge.rule_value).count
     success_tests_by_category == all_tests_by_category && !@current_user.badges.include?(badge)
   end
 
@@ -47,13 +44,5 @@ class BadgeService
 
   def passed_success
     @current_user.tests.where("test_passages.success = true")
-  end
-
-  def set_value(badge)
-    badge.rule.split('_').last
-  end
-
-  def set_rule(badge)
-    badge.rule.split('_').first
   end
 end
