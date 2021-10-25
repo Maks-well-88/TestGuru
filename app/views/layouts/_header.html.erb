@@ -8,13 +8,14 @@
           <li class="nav-item">
               <%= link_to 'Управление тестами', admin_tests_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to 'Награды', badges_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Обратная связь', new_feedback_path, class: "nav-link" %>
+          </li>
         <% end %>
-        <li class="nav-item">
-          <%= link_to 'Награды', badges_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Обратная связь', new_feedback_path, class: "nav-link" %>
-        </li>
+
       </ul>
 
       <span class="navbar-text">
