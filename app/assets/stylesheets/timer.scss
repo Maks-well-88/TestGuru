@@ -1,7 +1,16 @@
 .awesome_timer {
   display: inline-flex;
   justify-content: flex-start;
-  font-size: 50px;
+  font-size: 40px;
   margin: 0;
   color: #4f8fbd;
+  vertical-align: bottom;
+}
+
+.hide {
+  display: none;
+}
+
+.timer {
+  margin-left: 10px;
 }

@@ -88,6 +88,7 @@ en:
     show:
       header: "Passing the test: '%{title}'"
       process: "Question %{current} / %{all}: %{question}"
+      time_is_over: "TIME IS OVER!"
     result:
       completed: "Test '%{title}' completed!"
       count: "Correct answers: %{answers}%"

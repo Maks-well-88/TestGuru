@@ -5,7 +5,12 @@
                      class: "myBar mb-4" %>
 
 <% if @test_passage %>
-  <%= content_tag :p, "", data: { time: @test_passage.test.time }, class: "timer awesome_timer mb-4" %>
+  <div>
+    <div class="awesome_timer mt-4" >
+      <%= octicon "clock", height:55, class: "hide clock" %>
+      <%= content_tag :p, "", data: { time: @test_passage.test.time }, class: "timer hide" %>
+      <%= content_tag :p, t('.time_is_over'), class: "hide sad-message" %>
+    </div>
 <% end %>
 
 <h4 class="mt-2 mb-3">

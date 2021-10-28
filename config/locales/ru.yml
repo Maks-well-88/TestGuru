@@ -88,6 +88,7 @@ ru:
     show:
       header: "Прохождение теста: '%{title}'"
       process: "Вопрос %{current} / %{all}: %{question}"
+      time_is_over: "ВРЕМЯ ВЫШЛО!"
     result:
       completed: "Тест '%{title}' завершен!"
       count: "Правильных ответов: %{answers}%"
