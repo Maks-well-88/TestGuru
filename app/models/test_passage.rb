@@ -38,6 +38,14 @@ class TestPassage < ApplicationRecord
     ((count_number_of_questions - 1) / test.questions.count.to_f * 100).round(0)
   end
 
+  def deadline
+    created_at + test.time * 60
+  end
+
+  def is_over?
+    deadline < Time.now
+  end
+
   private
 
   def correct_answers

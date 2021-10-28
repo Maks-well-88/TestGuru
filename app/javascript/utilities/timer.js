@@ -19,7 +19,6 @@ function startTimer(timeLeft, control) {
   countDown();
 
   function countDown() {
-    console.log(localStorage.getItem('time'))
     localStorage.setItem('time', time);
 
     let minutes = Math.floor(time / 60);
@@ -38,10 +37,6 @@ function startTimer(timeLeft, control) {
       localStorage.clear('time');
       control.innerHTML = "00:00";
       clearInterval(timeDown);
-
-      setTimeout(function() {
-        location.href = location.pathname + "/result";
-      }, 1000);
     }
   }
 }

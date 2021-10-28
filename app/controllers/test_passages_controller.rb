@@ -16,7 +16,7 @@ class TestPassagesController < ApplicationController
       @test_passage.accept!(params[:answer_ids])
     end
 
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.is_over?
       message = BadgeService.new(@test_passage).call
       flash[:success] = message if message != nil
       redirect_to result_test_passage_path(@test_passage)
