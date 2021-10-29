@@ -6,11 +6,12 @@ en:
   start: "Start"
   watch: "Show"
   edit: "Edit"
+  edit_this_test: "Edit test"
   delete: "Delete"
   delete_confirm: "Are you sure?"
   create_question: "Create a new question"
   create_answer: "Create a new answer"
-  create_test: "-> Create test"
+  create_test: "Create test"
   question: "Enter your question"
   answer: "Enter your answer"
   edit_answer: "Edit the answer to the question: %{question}"
@@ -37,6 +38,7 @@ en:
   confirm_pass: "Repeat password"
   characters_minimum: "characters minimum"
   information: "Congratulations on your achievement! Check out the badges!"
+  minutes: "min."
 
   helpers:
     submit:
@@ -75,6 +77,8 @@ en:
       title: "Title"
       level: "Level"
       questions: "Questions"
+      time: "Time to pass"
+      category: "Category"
       all_tests: "All tests"
     start:
       good_luck: "Successful passing of the test!"
@@ -91,6 +95,7 @@ en:
       bad: "Result: test failed"
     update:
       no_answer: "You haven't selected any answers!"
+      time_is_over: "Time to passing the test is over!"
     gist:
       success: "The question was successfully saved at the link: %{url}"
       failure: "Something went wrong..."
@@ -114,7 +119,7 @@ en:
     tests:
       show:
         test: "Test"
-        question_list: "The list of questions"
+        question_list: "The list of questions:"
       index:
         title: "Title"
         level: "Level"

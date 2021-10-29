@@ -11,6 +11,7 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+        time: "Time to pass"
       question:
         body: "Question"
       answer:
@@ -33,6 +34,8 @@ en:
       messages:
         blank: "can't be blank"
         greater_than_or_equal_to: "can't be negative"
+        greater_than: "can't be zero"
+        not_a_number: "not filled"
         too_short: "is too short"
         taken: "already exists"
         required: "not selected"

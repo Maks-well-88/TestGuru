@@ -1,15 +1,22 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
-<br />
-
+<hr />
 <%= content_tag :div, "#{@test_passage.count_persentage} %",
                      data: { percentage: @test_passage.count_persentage },
-                     class: "myBar mb-3" %>
+                     class: "myBar mb-4" %>
 
-<span>
+<% if @test_passage %>
+  <div>
+    <div class="awesome_timer mt-4" >
+      <%= octicon "clock", height:55 %>
+      <%= content_tag :p, "", data: { time: @test_passage.test.time }, class: "timer" %>
+    </div>
+<% end %>
+
+<h4 class="mt-2 mb-3">
   <%= t('.process', current: @test_passage.count_number_of_questions,
                      all: @test_passage.test.questions.count,
                      question: @test_passage.current_question.body ) %>
-</span>
+</h4>
 
 <%= form_with url: test_passage_path(@test_passage), method: :put do |f| %>
   <%= f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -18,7 +25,8 @@
       <%= b.label %>
     </p>
   <% end %>
-  <p><%= link_to 'Post_Gist', gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= f.submit t('next') %></p>
+  <div class="mt-4"><%= f.submit t('next'), class: "btn btn-success end-passage" %>
+     <%= link_to 'Post Gist', gist_test_passage_path(@test_passage), method: :post, class: "btn btn-outline-info btn-sm" %>
+  </div>
 <% end %>
 <br />

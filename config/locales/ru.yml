@@ -6,11 +6,12 @@ ru:
   start: "Старт"
   watch: "Смотреть"
   edit: "Изменить"
+  edit_this_test: "Изменить тест"
   delete: "Удалить"
   delete_confirm: "Вы уверены?"
   create_question: "Создать новый вопрос"
   create_answer: "Создать новый ответ"
-  create_test: "-> Создать тест"
+  create_test: "Создать тест"
   question: "Введите вопрос"
   answer: "Введите ответ"
   edit_answer: "Редактировать ответ к вопросу: %{question}"
@@ -37,6 +38,7 @@ ru:
   confirm_pass: "Повторите пароль"
   characters_minimum: "символов минимум"
   information: "Поздравляем c достижением! Проверьте награды!"
+  minutes: "мин."
 
   helpers:
     submit:
@@ -74,7 +76,9 @@ ru:
     index:
       title: "Название"
       level: "Уровень"
-      questions: "Вопросы"
+      questions: "Вопросов"
+      time: "Время прохождения"
+      category: "Категория"
       all_tests: "Все тесты"
     start:
       good_luck: "Успешного прохождения теста!"
@@ -91,6 +95,7 @@ ru:
       bad: "Результат: тест не пройден"
     update:
       no_answer: "Вы не выбрали ни одного ответа!"
+      time_is_over: "Время прохождения теста истекло!"
     gist:
       success: "Вопрос успешно сохранен по ссылке: %{url}"
       failure: "Что-то пошло не так..."
@@ -114,7 +119,7 @@ ru:
     tests:
       show:
         test: "Тест"
-        question_list: "Список вопросов"
+        question_list: "Список вопросов:"
       index:
         title: "Название"
         level: "Уровень"

@@ -1,9 +1,11 @@
 <h1><%= t('.test')%>: "<%= @test.title %>"</h1>
 <hr />
-<div class='heading'><%= t(".question_list") %>:</div>
+<p><%= link_to t('back'), admin_tests_path(@test), class: "btn btn-outline-info btn-sm" %>
+   <%= link_to t('edit_this_test'), edit_admin_test_path(@test), class: "btn btn-outline-info btn-sm" %>
+   <%= link_to t('create_question'), new_admin_test_question_path(@test), class: "btn btn-outline-success btn-sm" %>
+</p>
+<%= content_tag :h3, t(".question_list"), class: "heading mt-4" %>
 <ol>
   <%= render @test.questions %>
 </ol>
-<p><%= link_to t('back'), admin_tests_path(@test) %> |
-<%= link_to t('create_question'), new_admin_test_question_path(@test)  %></p>
 <br />

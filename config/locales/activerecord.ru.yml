@@ -11,6 +11,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        time: "Время прохождения"
       question:
         body: "Вопрос"
       answer:
@@ -33,6 +34,8 @@ ru:
       messages:
         blank: "не может быть пустым"
         greater_than_or_equal_to: "не может быть отрицательным"
+        greater_than: "не может быть нулевым"
+        not_a_number: "не заполнено"
         too_short: "слишком короткий"
         taken: "уже существует"
         required: "не выбрана"

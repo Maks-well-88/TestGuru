@@ -4,5 +4,7 @@
     </td>
     <td class="sortingTitle"><%= test.title %></td>
     <td class="text-center"><%= test.level %></td>
+    <td class="text-center"><%= test.category.title %></td>
     <td class="text-center"><%= test.questions.count %></td>
+    <td class="text-center"><%= test.time %> <%= t('minutes')%></td>
   </tr>
