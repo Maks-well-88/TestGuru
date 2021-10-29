@@ -88,7 +88,6 @@ en:
     show:
       header: "Passing the test: '%{title}'"
       process: "Question %{current} / %{all}: %{question}"
-      time_is_over: "TIME IS OVER!"
     result:
       completed: "Test '%{title}' completed!"
       count: "Correct answers: %{answers}%"
@@ -96,6 +95,7 @@ en:
       bad: "Result: test failed"
     update:
       no_answer: "You haven't selected any answers!"
+      time_is_over: "Time to passing the test is over!"
     gist:
       success: "The question was successfully saved at the link: %{url}"
       failure: "Something went wrong..."

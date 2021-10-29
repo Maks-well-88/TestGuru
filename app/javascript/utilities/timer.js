@@ -1,14 +1,11 @@
 document.addEventListener('turbolinks:load', function() {
   const control = document.querySelector('.timer');
   const cleanStorage = document.querySelector('.clean-storage');
-  const sadMessage = document.querySelector('.sad-message');
-  const clock = document.querySelector('.clock');
+  const clockTimer = document.querySelector('.awesome_timer');
 
   if (control) {
     let timeLeft = control.dataset.time;
-    control.classList.remove('hide')
-    clock.classList.remove('hide')
-    startTimer(timeLeft, control, clock, sadMessage);
+    startTimer(timeLeft, control, clockTimer);
   }
 
   if (cleanStorage) {
@@ -16,7 +13,7 @@ document.addEventListener('turbolinks:load', function() {
   }
 })
 
-function startTimer(timeLeft, control, clock, sadMessage) {
+function startTimer(timeLeft, control, clockTimer) {
   let time = localStorage.getItem('time') || timeLeft * 60;
   let timeDown = setInterval(countDown, 1000);
 
@@ -34,16 +31,12 @@ function startTimer(timeLeft, control, clock, sadMessage) {
     --time;
 
     if (time < 30) {
-      control.style.color = 'red';
-      clock.style.color = 'red';
+      clockTimer.style.color = 'red';
     }
 
     if (time < 0) {
       localStorage.clear('time');
-      control.classList.add('hide');
-      clock.classList.add('hide')
-      sadMessage.classList.remove('hide');
-      sadMessage.style.color = 'red';
+      document.querySelector('.end-passage').click()
       control.innerHTML = "00:00";
       clearInterval(timeDown);
     }

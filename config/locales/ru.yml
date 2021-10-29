@@ -88,7 +88,6 @@ ru:
     show:
       header: "Прохождение теста: '%{title}'"
       process: "Вопрос %{current} / %{all}: %{question}"
-      time_is_over: "ВРЕМЯ ВЫШЛО!"
     result:
       completed: "Тест '%{title}' завершен!"
       count: "Правильных ответов: %{answers}%"
@@ -96,6 +95,7 @@ ru:
       bad: "Результат: тест не пройден"
     update:
       no_answer: "Вы не выбрали ни одного ответа!"
+      time_is_over: "Время прохождения теста истекло!"
     gist:
       success: "Вопрос успешно сохранен по ссылке: %{url}"
       failure: "Что-то пошло не так..."
